@@ -19,8 +19,10 @@ con.on('open',  () => {
 app.use(express.json())
 
 const studentRouter = require('./routers/student')
+const userRouter = require('./routers/user')
 
 app.use('/student', studentRouter)
+app.use('/user',userRouter)
 
 app.listen(9000,() =>{
 
